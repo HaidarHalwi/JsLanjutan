@@ -1,0 +1,125 @@
+<!-- Function -->
+<script>
+  //Dasar-function
+  //     function dasar() {
+  //   return "faiz haidar";
+  //     }
+  //     alert(dasar());
+
+  // cara lain
+  // function nama(namaLengkap) {
+  //   return namaLengkap;
+  // }
+  // alert(nama("faizhaidar"));
+
+  //Dasar-pparameter
+  //  standar function
+  function dataNama(namaDepan, namaBelakang) {
+    console.log("nama depan saya :", namaDepan);
+    console.log("nama belakang saya :", namaBelakang);
+  }
+  dataNama("faiz", "halwi");
+  //   argument itu 'faiz', 'halwi' atau dataNama("faiz", "halwi"); => isi data argument nya
+
+  //   cara lain
+  function sayaFaiz(sumbuY, sumbuZ) {
+    // pakai "+" akan = bersatu
+    // console.log("perkenalkan saya :", sumbuY + sumbuZ);
+    // pakai "," akan jadi spasi
+    console.log("perkenalkan saya :", sumbuY, sumbuZ);
+  }
+  sayaFaiz("faiz", "halwi");
+
+  //   cara lain pakai variabel
+
+  //Dasar-arguments
+  function Argument() {
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+  }
+  Argument("faiz", "haidar");
+
+  //   arguments pakai for
+  function cobaPakaiFor() {
+    for (let i = 0; i < arguments.length; i++) {
+      console.log("sebenarnya :", arguments[i]);
+    }
+  }
+  cobaPakaiFor("saya", "mahasiswa");
+
+  //   dasar-new
+  //   new function
+  const fulnama = new Function(
+    "firstname",
+    "lastname",
+    "console.log(firstname, lastname)"
+  );
+
+  fulnama("faiz", "haidar");
+
+  //   cara lain
+  const cobaLagi = new Function("x", "y", "return x+y");
+  console.log(cobaLagi(1, 2));
+
+  //   cara lain
+  const cobaLagi2 = new Function("x", "y", "console.log(x+y)");
+  cobaLagi2(5, 10);
+
+  //   cara lain
+  const cobaLagi3 = new Function('console.log("ini faiz")');
+  cobaLagi3();
+
+  //   arrow function
+  let saya = (a, b) => {
+    console.log(a + b);
+  };
+  saya(1, 2);
+
+  // RANGKUMAN SINGKAT FUNCTION
+  //   function standar
+  function fun1(x, y) {
+    console.log(x + y);
+  }
+  fun1(1, 1);
+
+  //   function new
+  const fun2 = new Function("x", "y", "console.log(x + y)");
+  fun2(2, 2);
+
+  //   arrow function
+  let fun3 = (x, y) => {
+    console.log(x + y);
+  };
+  fun3(3, 3);
+
+  //   Dasar - hoisting
+  //   jika posisi console.log() nya berada di atas (sebelum var nya) maka undifened
+
+  //   console.log(angka);
+  var angka = 10;
+  console.log(angka);
+
+  //   jika posisi console.log() nya berada di atas (sebelum var nya) maka error
+  let angka1 = 10;
+  console.log(angka1);
+  //   jika posisi console.log() nya berada di atas (sebelum var nya) maka error
+  const angka2 = 10;
+  console.log(angka2);
+
+  // Dasar - Match.random
+  const xixi = (o, p) => {
+    console.log(o + p);
+  };
+  xixi(2, 3);
+
+  function random() {
+    const number = ~~(Math.random() * 1000);
+    if (number > 200) {
+      console.log(`angka lebih dari 200 yaitu`, number);
+    } else {
+      console.log(`angka kurang dari 200 yaitu`, number);
+    }
+  }
+
+  random();
+</script>

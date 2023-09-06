@@ -1,0 +1,20 @@
+    [{
+
+    		"nama" : "faiz",
+    		"ttl" : "19 juli 2004",
+    		"tempat" : "tangerang",
+    		"no" : 1
+    	},
+    	{
+    		"nama" : "haidar",
+    		"ttl" : "7 january 2003",
+    		"tempat" : "bandung",
+    		"no" : 2	
+    	},
+    	{
+    		"nama" : "halwi",
+    		"ttl" : "22 maret 2000",
+    		"tempat" : "jakarta",
+    		"no" : 3
+    	}
+    ]

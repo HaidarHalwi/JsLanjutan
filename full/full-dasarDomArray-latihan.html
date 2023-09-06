@@ -1,0 +1,59 @@
+<script>
+  //   let nilaiMurid = [100, 85, 79, 100, 99];
+  //   let namaMurid = ["udin", "surni", "jira", "rumi", "miksa"];
+  //   let tempatTinggal = ["jakarta", "surabaya", "medan", "aceh", "bali"];
+
+  //   let gabungData = nilaiMurid.concat(namaMurid);
+  //   let gabungan = gabungData.concat(tempatTinggal);
+
+  // data - data
+  let dataMurid = [
+    {
+      nama: "udin",
+      nilai: 100,
+      tempatTinggal: "jakarta",
+    },
+    {
+      nama: "surni",
+      nilai: 85,
+      tempatTinggal: "surabaya",
+    },
+    {
+      nama: "jira",
+      nilai: 79,
+      tempatTinggal: "medan",
+    },
+    {
+      nama: "rumi",
+      nilai: 100,
+      tempatTinggal: "aceh",
+    },
+    {
+      nama: "miksa",
+      nilai: 99,
+      tempatTinggal: "bali",
+    },
+  ];
+
+  let nama = prompt("masukan nama :");
+  let nilai = prompt("masukan nilai :");
+  let tempatT = prompt("masukan tempat tinggal :");
+
+  dataMurid.map((name, alamat) => {
+    alert(name.nama);
+  });
+
+  dataMurid.map((name, alamat) => {
+    alert(name.nilai, name.tempatTinggal);
+  });
+
+  dataMurid.map((name, alamat) => {
+    alert(name.tempatTinggal);
+  });
+
+  alert(
+    ` Nama anda ${nama} nilai anda ${nilai} dan tempat tinggal anda ${tempatT} `
+  );
+
+  //   console.log(gabungan);
+</script>

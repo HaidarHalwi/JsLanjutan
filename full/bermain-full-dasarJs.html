@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Membuat Prompt untuk menjadi satu kegiatan sehari hari
+      // ada 3 prompt untuk mengisikan kegiatan
+      // 3 prompt untuk mengisi kegaiatnnya apa, dan terdapat perintah pada prompt
+      // setelah 3 prompt di isi maka alert terakhir menampilkan semua data yang telah diisi
+      let hariSatu = prompt("Hari ini akan melakukan apa?");
+      let hariDua = prompt("Dan hari keDua akan melakukan apa?");
+      let hariTiga = null;
+      let hariEmpat = [];
+
+      hariEmpat.push("bermain");
+
+      // start Pengkondisian
+      if (hariTiga == null) {
+        hariTiga = "tidak ada kegiatan";
+      } else {
+        hariTiga = "tidur";
+      }
+      // finish Pengkondisian
+
+      alert(
+        `hari pertama saya lakukan ${hariSatu} lalu hari kedua saya ${hariDua} dan hari ketiga saya lakukan ${hariTiga} serta hari ke empat saya ${hariEmpat}`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!-- ARRAY => 12 MATERI -->
+<script>
+  // MATERI 1
+  // menampilkan emot => window + .
+  //   Dasar-pemahaman array
+  let array1 = ["😀", "😁", "😂"];
+  console.log(array1);
+  //   cara lain
+  let array2 = [];
+  array2[0] = "🤣";
+  array2[1] = "😎";
+  array2[2] = "😍";
+  console.log(array2);
+
+  //   Dasar-length
+  //   untuk mengetahui ada berapa jumlah data di dalam 8array
+  let array3 = ["😀", "😁", "😂"];
+  console.log(array3.length);
+
+  // MATERI 2
+  //    Dasar-pemanggilan Array
+  let array4 = new Array();
+  array4[0] = "faiz";
+  array4[2] = "udin";
+  array4[4] = "rizki";
+  console.log(array4[0]);
+
+  // MATERI 3
+  // cara mengetahui data array / "data array mengandung data yang ku maskud gak ya?"
+  //  Dasar-includes => mengetahui isi data array ada / tidak
+  let array5 = ["🥑", "🍅", "🍒", "🍈", "🍉"];
+  let periksa1 = array5.includes("🍓");
+  console.log(periksa1);
+
+  // Dasar-indexOf => untuk mengetahui urutan keberapa di data array
+  let array6 = ["🥑", "🍅", "🍒", "🍈", "🍉"];
+  let periksa2 = array6.indexOf("🍅");
+  console.log(periksa2);
+
+  // Dasar-gabungan array dengan if else
+  let array7 = ["🥑", "🍅", "🍒", "🍈", "🍉"];
+  let periksa3 = array7.includes("🍓");
+  let periksa4 = array7.indexOf("🍅");
+
+  if (periksa4) {
+    console.log("betul, ada di dalam array");
+  } else {
+    console.log("tidak ada di array");
+  }
+
+  // caralain - mengetahui ada atau tidak di data index SERTA mengetahui berada di index berapa
+  let array8 = ["🥑", "🍅", "🍒", "🍈", "🍉"];
+  let periksa5 = array8.includes("🍅");
+  let periksa6 = array8.indexOf("🍅");
+
+  if (periksa5) {
+    console.log(`betul, ada di dalam array dan di index ke - ${periksa6}`);
+  } else {
+    console.log("tidak ada di array");
+  }
+
+  // caralain - mengetahui data sebelum dan sesudah
+  let array9 = ["🥑", "🍅", "🍒", "🍈", "🍉"];
+  let periksa7 = array9.includes("🍅");
+
+  if (periksa7) {
+    let periksa8 = array9.indexOf("🍅");
+    let buahSebelum = periksa8 - 1;
+    let buahSetelah = periksa8 + 1;
+    let hasilSebelum = array9[buahSebelum];
+    let hasilSetelah = array9[buahSetelah];
+    console.log(`sebelum tomat ${hasilSebelum}`);
+    console.log(`setelah tomat ${hasilSetelah}`);
+    console.log(`betul, ada di dalam array dan di index ke - ${periksa6}`);
+  } else {
+    console.log("tidak ada di array");
+  }
+
+  // caralain - mengetahui posisi data yang paling awal dan paling akhir
+  // .shif() & .pop()
+  let array10 = ["🥑", "🍅", "🍒", "🍈", "🍉"];
+  let periksa9 = array10.includes("🍈");
+
+  if (periksa9) {
+    let buahPertama = array10.shift();
+    console.log(`buah awal yaitu ${buahPertama}`);
+
+    let buahAkhir = array10.pop();
+    console.log(`buah akhir yaitu ${buahAkhir}`);
+  } else {
+    console.log("tidak ada di array");
+  }
+
+  // caralain - mengetahui posisi data yang paling akhir
+  // .length
+  let array11 = ["🥑", "🍅", "🍒", "🍈", "🍉"];
+  let periksa10 = array11.includes("🍈");
+
+  if (periksa10) {
+    let buahPertama1 = array11.shift();
+    console.log(`buah awal yaitu ${buahPertama1}`);
+
+    let buahAkhir1 = array11[array11.length - 1];
+    console.log(`buah akhir yaitu ${buahAkhir1}`);
+  } else {
+    console.log("tidak ada di array");
+  }
+
+  // caralain-menambah data array
+  let namaTeman = ["tanjung", "vallen", "oscar", "fajar", "daffa", "aidil"];
+
+  namaTeman["buahSatu"] = "🍌";
+  namaTeman["buahDua"] = "🍊";
+  console.log(namaTeman);
+
+  // MATERI 4
+  // shallowCopy & deepCopy
+  // Dasar - spreedOperator ...
+  let namaKawan = ["bisma", "bagus", "nashif", "faried", "rafif"];
+  let newNamaKawan = [...namaKawan];
+
+  newNamaKawan[0] = "faiz";
+
+  console.log({ namaKawan });
+  console.log({ newNamaKawan });
+
+  // Dasar - Array.from()
+  let namaKawan2 = ["bisma", "bagus", "nashif", "faried", "rafif"];
+  let newNamaKawan2 = Array.from(namaKawan2);
+
+  newNamaKawan2[0] = "faiz";
+
+  console.log({ namaKawan2 });
+  console.log({ newNamaKawan2 });
+
+  // Dasar - JSON.parse(JSON.stringify())
+  let namaKawan3 = ["bisma", "bagus", "nashif", "faried", "rafif"];
+  let newNamaKawan3 = JSON.parse(JSON.stringify(namaKawan3));
+
+  newNamaKawan3[0] = "faiz";
+
+  console.log({ namaKawan3 });
+  console.log({ newNamaKawan3 });
+
+  // MATERI 5
+  // Dasar-data yang bebeda di dalam array
+  // ["faiz", 20, { nilai: 100 }, ["udin", "riski"]]
+  //     0     1         2                 3
+  //                                  0         1
+  let dataArray = ["faiz", 20, { nilai: 100 }, ["udin", "riski"]];
+  console.log(dataArray[3][1]);
+
+  // Dasar-cara panggil function dalam array
+  let dataArray2 = [
+    "faiz",
+    20,
+    {
+      nilai: function () {
+        console.log("saya faiz");
+      },
+    },
+    ["udin", "riski"],
+  ];
+
+  dataArray2[2].nilai();
+
+  // MATERI 6
+  // Dasar-Menggabungkan 2 array jadi 1 => Array.concat()
+  let arrayBagianA = ["🍕", "🍔", "🍟"];
+  let arrayBagianB = ["🥞", "🧇", "🍳"];
+
+  let gabungArray = arrayBagianA.concat(arrayBagianB);
+  console.log(gabungArray);
+
+  // Dasar-Memecah isi array bentuk aslinya => list of nama variabelnya
+  let arrayBagianAA = ["🍕", "🍔", "🍟"];
+  let arrayBagianBB = ["🥞", "🧇", "🍳"];
+
+  let FAIZ = arrayBagianAA.concat(arrayBagianBB);
+
+  for (list of FAIZ) console.log(list);
+
+  // Dasar-Memecah isi array bentuk urutan index (angka) => list in nama variabelnya
+  let makananSaya = ["🍕", "🍔", "🍟"];
+  let makananKamu = ["🥞", "🧇", "🍳"];
+
+  let Haidar = makananSaya.concat(makananKamu);
+
+  for (list in Haidar) console.log(list);
+
+  // Dasar-Memecah isi array bentuk urutan index (angka) & bentuk aslinya => arrow function, .map()
+  let makanSaya = ["🍕", "🍔", "🍟"];
+  let makanKamu = ["🥞", "🧇", "🍳"];
+
+  let Halwi = makanSaya.concat(makanKamu);
+
+  Halwi.map((object, nilai) => console.log(object, nilai));
+
+  // Contoh kasus
+  // menampilkan data yang sudah di siapkan dan menampilkan salah satu data nya
+  let namaMurid = [
+    {
+      nama: "faiz",
+      alamat: "tangerang",
+      tl: 19,
+    },
+    {
+      nama: "riski",
+      alamat: "cikupa",
+      tl: 16,
+    },
+    {
+      nama: "yumm",
+      alamat: "serpong",
+      tl: 10,
+    },
+  ];
+
+  namaMurid.map((name, alamat) => {
+    console.log(name.nama, name.alamat);
+    // console.log(name); //jika ingin tampil semua data
+  });
+
+  // Menampilkan data mulai dari tanggal lahir terbesar angka nya
+  const namaMuridSaya = [
+    {
+      nama: "faiz",
+      alamat: "tangerang",
+      tl: 1,
+    },
+    {
+      nama: "riski",
+      alamat: "cikupa",
+      tl: 20,
+    },
+    {
+      nama: "yumm",
+      alamat: "serpong",
+      tl: 10,
+    },
+    {
+      nama: "byn",
+      alamat: "depok",
+      tl: 30,
+    },
+    {
+      nama: "vivy",
+      alamat: "cikarang",
+      tl: 5,
+    },
+  ];
+
+  // tanggal lahir mulai dari terbesar
+  // namaMuridSaya.sort((a, b) => a.tl - b.tl).map((nilai) => console.log(nilai));
+
+  // tanggal lahir mulai dari terkecil
+  // namaMuridSaya.sort((a, b) => b.tl - a.tl).map((nilai) => console.log(nilai));
+
+  // tanggal lahir yang tampil di atas tanggal 5
+  // namaMuridSaya.filter((x) => x.tl > 5).map((nilai) => console.log(nilai));
+
+  // menggabungkan .sort() .map() .filter()
+  namaMuridSaya
+    .sort((a, b) => a.tl - b.tl)
+    .filter((x) => x.tl > 5)
+    .map((nilai) => console.log(nilai));
+</script>

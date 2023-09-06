@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alert('tombol di klik')">klik alert</button>
+    <button
+      class="tombolSatu"
+      onmouseout="ubahText()"
+      onmouseover="gantiText()"
+    >
+      klik
+    </button>
+
+    <script>
+      // satu
+      let nama = "faiz haidar";
+      let umur = 19;
+      let sekolah = "man 2";
+      console.log(
+        `nama saya ${nama}, umur saya ${umur} dan saya sekolah di ${sekolah}`
+      );
+
+      //   dua
+      let absen = 20;
+      let hobi = [];
+      if (hobi == null) {
+        console.log("saya belum punya hobi");
+      } else {
+        console.log("hobi saya melukis");
+      }
+
+      //   tiga
+      let ubah = document.querySelector(".tombolSatu");
+      function ubahText() {
+        ubah.textContent = "berubah";
+      }
+      function gantiText() {
+        ubah.textContent = "klik";
+      }
+
+      let hello = document.body;
+      hello.append("hello world");
+
+      let a = document.body;
+      let b = document.createElement("h1");
+      b.textContent = "saya faiz haidar";
+      b.style.textShadow = "5px 5px 5px red";
+      a.append(b);
+
+      //   empat
+    </script>
+  </body>
+</html>

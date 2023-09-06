@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // DASAR - DASAR
+
+      // Dasar-alert
+      // Menampilkan pop-up
+      //   alert("hello world!");
+
+      // Dasar-console
+      // Menampilkan teks di console
+      //   console.log("hello world!");
+
+      // Dasar-prompt
+      // Menampilkan kolom untuk diisi
+      //   prompt("masukan nama anda :");
+
+      // A. Variabel
+
+      // Dasar-variabel-var
+      // var variabel bebas = bisa di ganti
+      // Variabel & Menggabungkan Variabel dengan Console
+      //   var nama = 30;
+      //   nama = 10
+      //   console.log("faiz usia kamu " + nama);
+
+      // Dasar-variabel-let
+      // const variabel bebas = bisa di ganti
+      // Variabel & Menggabungkan Variabel dengan Console
+      //   let ttl = 99;
+      //   ttl = 55;
+      //   console.log("nama kamu terdiri dari " + ttl + " huruf");
+
+      // Dasar-variabel-const
+      // const variabel bebas = tidak bisa di ganti
+      // Variabel & Menggabungkan Variabel dengan Console
+      //   let ttl = 19;
+      //   ttl = 11;
+      //   console.log("kamu lahir pada tanggal " + ttl);
+
+      // Menggabungkan Variabel dengan Alert
+      //   let tahun = prompt("Tahun berapa kamu lahir?");
+      //   alert("Anda lahir pada tahun " + tahun);
+
+      // B. TypeData
+
+      //   Mengabungkan variabel dengan alert
+      //   tanda kutip menggunakan ``
+      // let nama = "faiz haidar halwi"; // string
+      // let ttl = 19; // integer
+      // let tahun = "2004"; // string
+      // let kosong; // nol (varibel kosong)
+      // let tidakAda = null; // null
+      // let noAbsen = 5; // number
+      // alert(
+      //   `nama saya ${nama} dan saya lahir pada tanggal ${ttl} tahun ${tahun} serta nomor absen ke ${noAbsen}`
+      // );
+
+      // C. Pengkondisian
+      let nama = "faiz haidar halwi"; // string
+      let ttl = 19; // integer
+      let tahun = "2004"; // string
+      let sekolah; // nol (varibel kosong)
+      let hobi = null; // null
+      let noAbsen = 5; // number
+
+      // sekolah = "MI jaya 02";
+
+      // Dasar-if & else
+      // rekomend pakai yang ini saja
+      // if (hobi == null) {
+      //   hobi = "belum kepikiran";
+      // } else {
+      //   hobi = "sudah kepikiran";
+      // }
+
+      // Dasar-swicth
+      switch (noAbsen) {
+        case 1:
+          absen = "tidak punya nomor absen";
+          break;
+        case 5:
+          absen = "saya no absen ke 5";
+          break;
+        default:
+          absen = "coba tebak saya nomor absen berapa?";
+          break;
+      }
+
+      alert(
+        `nama saya ${nama} dan saya lahir pada tanggal ${ttl} tahun ${tahun} serta nomor absen ke ${noAbsen} hobi saya ${hobi} kemudian saya dari sekolah ${sekolah}. `
+      );
+
+      // Dasar-operator
+      // let nama = "faiz haidar halwi"; // string
+      // let ttl = 19; // integer
+      // let tahun = "2004"; // string
+      // let sekolah; // nol (varibel kosong)
+      // let hobi = null; // null
+      // let noAbsen = 5; // number
+
+      // sekolah = "MI jaya 02";
+
+      // if (hobi == null) {
+      //   hobi = "belum kepikiran";
+      // } else {
+      //   hobi = "sudah kepikiran";
+      // }
+
+      // operator
+      // let saldoSekarang = 1000;
+      // let saldoBulanDepan = 2000;
+      // const total = saldoSekarang + saldoBulanDepan;
+
+      // membuat perhitungan
+      // const a = 15;
+      // const b = 4;
+      // const z = a / b;
+
+      // alert(`hasil nya yaitu ${z}`);
+
+      // alert(
+      //   `nama saya ${nama} dan saya lahir pada tanggal ${ttl} tahun ${tahun} serta nomor absen ke ${noAbsen} hobi saya ${hobi} kemudian saya dari sekolah ${sekolah}. `
+      // );
+
+      // alert(
+      //   `saldo saya sekarang Rp.${saldoSekarang} dan bulan depan Rp.${saldoBulanDepan} jadi totalnya Rp.${total}`
+      // );
+
+      // D.Array
+      // bisa menampung banyak nilai
+      // rekomend pakai yang ini saja
+      // let namaBuah = ["mangga", "jambu", "melon"];
+      // namaBuah.push("semangka", "nanas"); // tambah isi index
+      // namaBuah.pop(); // hapus awal index
+      // namaBuah.shift(); // hapus akhir index
+      // alert(namaBuah);
+
+      // Metode lainnya membuat array
+      // let namaHewan = [];
+      // namaHewan[0] = "kucing";
+      // namaHewan[1] = "naga";
+      // namaHewan[2] = "singa";
+      // namaHewan.pop();
+      // alert(namaHewan);
+
+      // E. Looping
+      // for loop
+      // Dasar-for
+      // const namaBuah = ["mangga", "jambu", "melon", "semangka"];
+      // for (let i = 0; i < namaBuah.length; i++) {
+      //   console.log(namaBuah[i]);
+      // }
+
+      // Dasar-while
+      // let i = 10;
+      // while (i < 10) {
+      //   i++;
+      //   console.log("faiz haidar");
+      // }
+
+      // Dasar-dowhile
+      // let i = 10;
+      // do {
+      //   i++;
+      //   console.log("faiz haidar");
+      // } while (i < 10);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Following Light</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: none;
+        overflow: hidden;
+      }
+
+      .cursor {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: transparent;
+        position: absolute;
+        pointer-events: none;
+        transition: background-color 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <script>
+      const cursor = document.querySelector(".cursor");
+
+      document.addEventListener("mousemove", (event) => {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        cursor.style.left = mouseX + "px";
+        cursor.style.top = mouseY + "px";
+        cursor.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+      });
+
+      document.addEventListener("mouseleave", () => {
+        cursor.style.backgroundColor = "transparent";
+      });
+    </script>
+  </body>
+</html>

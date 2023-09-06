@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HTML -->
+    <!-- A.Dasar-onclick -->
+    <button id="tombol1" onclick="alert('tombol ini di klik')">Klik ID</button>
+
+    <!-- B.Dasar-function => cobaTampil() -->
+    <button class="tombol2" onclick="cobaTampil()">Klik Class</button>
+
+    <!-- C.Dasar-ganti warna & onmouseover -->
+    <button class="gantiWarna" onclick="klikGantiWarna()">
+      Klik Ganti Warna
+    </button>
+
+    <!-- D.Dasar-Ubah text, onmouseover, onmouseout-->
+    <button
+      class="ubahText"
+      onmouseover="ubahTextOver()"
+      onmouseout="ubahTextKeawal()"
+    >
+      Ubah Text
+    </button>
+    <!-- Cara Lainnya -->
+    <button
+      class="caraLainD"
+      onmouseover="oriText1()"
+      onmouseout="oriText2()"
+    ></button>
+
+    <!-- TUGAS -->
+    <button
+      class="tugas"
+      onmouseover="tampilText()"
+      onmouseout="berubahWarnaText()"
+    >
+      klik tugas
+    </button>
+
+    <!-- JS -->
+    <script>
+      // Dasar-mengubahTitle
+      //   document.title = "faiz haidar";
+
+      // Dasar-append
+      // untuk menampilkan di halaman web untuk Khusus body
+      //   const body = document.body;
+      //   body.append("Hello World");
+
+      // Dasar-menambahkan Element HTML
+      // tentukan Tag HTML nya
+      // pakai-createElement
+      //   let tampilH1 = document.createElement("h1");
+      // cara-1-innerHTML
+      // rekomend - jika di tambahkan element HTML pada string, maka terpengaruh
+      //   tampilH1.innerHTML = "<marquee>saya menampilkan h1</marquee>";
+      //   body.append(tampilH1);
+      // cara-2-innerText
+      // jika di tambahkan element HTML pada string, maka tidak terpengaruh
+      //   tampilH1.innerText = "saya menampilkan h1";
+      //   body.append(tampilH1);
+      // cara-3-textContent
+      // jika di tambahkan element HTML pada string, maka tidak terpengaruh
+      //   tampilH1.textContent = "saya menampilkan h1";
+      //   body.append(tampilH1);
+
+      // getElementById, getElementsByClassName, getElementsByName, getElementsByTagName, querySelector, querySelectorAll
+      // Dasar-getElementById
+      let tombolId = document.getElementById("tombol1");
+      // Dasar-style
+      // memberikan style css dengan js
+      tombolId.style.fontSize = "20px";
+      tombolId.style.background = "red";
+      tombolId.style.border = "none";
+
+      // B.Dasar-function => cobaTampil
+      // cobaTampil() => tag html di atas
+      let tombolClass = document.getElementsByClassName(".tombol2");
+      function cobaTampil() {
+        alert("tampil");
+      }
+
+      // C.Dasar-ganti warna
+      let tombolGantiWarna = document.querySelector(".gantiWarna");
+      function klikGantiWarna() {
+        tombolGantiWarna.style.background = "red";
+      }
+
+      // D.Dasar-Ubah text, onmouseover, onmouseout
+      let ubahTombolText = document.querySelector(".ubahText");
+      function ubahTextOver() {
+        ubahTombolText.textContent = "Telah Berubah";
+      }
+      function ubahTextKeawal() {
+        ubahTombolText.textContent = "Ubah text";
+      }
+      // Cara Lainnya
+      let cara = document.querySelector(".caraLainD");
+      let caraCara = "Cara Lain Ubah Text";
+      cara.textContent = caraCara;
+
+      function oriText1() {
+        cara.textContent = "halo";
+      }
+      function oriText2() {
+        cara.textContent = caraCara;
+      }
+
+      // TUGAS
+      let body = document.body;
+      let tugasSaya = document.querySelector(".tugas");
+      function tampilText() {
+        const text = document.createElement("p");
+        text.textContent = "Faiz Haidar Halwi";
+        body.style.color = "black";
+        body.append(text);
+      }
+      function berubahWarnaText() {
+        body.style.color = "blue";
+      }
+    </script>
+  </body>
+</html>
